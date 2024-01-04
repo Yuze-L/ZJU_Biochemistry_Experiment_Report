@@ -92,7 +92,7 @@ Folin-酚法适合测定的蛋白质范围为$5\sim100 \mathrm{μg}$。在一定
 在酶学研究中，酶比活力是用来衡量酶纯度的重要指标，比活力代表了单位质量蛋白的酶所具有的催化能力。对于同一种酶来说，比活力越大，酶的纯度越高。酶活力单位（U）是指在50\dc，$\mathrm{pH}=4.6$时，每分钟水解产生$1\mathrm{μg}$葡萄糖所需的酶量。而酶比活力是指每毫克蛋白质所具有的酶活力单位数量。本实验使用3,5-二硝基水杨酸法（DNS法）检测酶的活性。
 
 \subsubsection{蔗糖酶酶切去糖基化}
-
+\par Endo H，全称内切β-N-乙酰氨基葡萄糖苷酶-H(endo-β-N-acetylglucosaminidase H)Manβ1-4GlcNAcβ1-4GlcNAc ，分子量29kD，水解连接组成壳二糖核心的两个GlcNac基团之间的糖苷键，最适pH值5到6之间。除了岩藻糖连接到核心GlcNAc区域的糖链，Endo H几乎能够裂解所有通过β-1,4-糖苷键与天冬酰胺(Asn) N-连接的低聚糖，释放缺失一个GlcNAc的糖链和带有一个GlcNAc的糖蛋白。利用Endo H可以切除β-D-呋喃果糖苷水解酶中13个位点通过N-连接于三联子 Asn-X-Ser/Thr（X不为脯氨酸）的糖链。 
 \subsubsection{正交试验探究最佳反应条件}
 \par 正交试验法是指安排组织试验的一种科学方法，利用规格化的正交表来设计试验方案和分析试验结果，选出代表性强的试验条件，并通过几次试验的数据，找到最优的或较优的方案。本实验中选择底物浓度$[S]$、酶浓度$[E]$、反应温度$T$和$pH$四因素作为代表性试验条件，每个因素取三个不同水平，通过如下图正交表L9(34)，进行平行重复实验三次。用指标-因素关系图，找到本次实验条件下的最佳水平组合，再针对该组合细化条件做进一步优化探究。并且对试验结果进行方差分析，判断各因素对酶促反应速率影响的显著程度。
 \subsubsection{SDS-PAGE}
@@ -268,9 +268,10 @@ Folin-酚乙试剂/mL & \multicolumn{1}{l}{0.5} & 0.5  & 0.5  & 0.5  & 0.5  & 0.
 根据\autoref{tab:stdcurve_glucose}进行实验，计算相应的蛋白质浓度，并将其对$\lambda = 520$nm下测得吸光度绘图，得到蛋白质标准曲线。
 
 \begin{table}[H]
-\centering
-\caption{葡萄糖浓度标准曲线的绘制}
+\begin{minipage}[t]{0.55\textwidth}
+    \caption{葡萄糖浓度标准曲线的绘制}
 \label{tab:stdcurve_glucose}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}ccccccc@{}}
 \toprule
 \diagbox[height = 3em]{试剂}{试管号}     & 0     & 1     & 2    & 3    & 4    & 5    \\ \midrule
@@ -282,15 +283,12 @@ Folin-酚乙试剂/mL & \multicolumn{1}{l}{0.5} & 0.5  & 0.5  & 0.5  & 0.5  & 0.
 \multicolumn{7}{c}{\textbf{涡旋仪混匀，$>$95\dc 水浴5min，冷却至室温}} \\ \midrule
 去离子水/mL              & 5     & 5     & 5    & 5    & 5    & 5    \\ \bottomrule
 \end{tabular}
-\end{table}
-
-\subsubsection{各样品活性的测定}
-首先根据\autoref{tab:glucose_pre_op_table}对样品IV不同样品用量进行预实验(操作同\autoref{tab:stdcurve_glucose})，选择分光度在0.7-0.9的条件，再根据\autoref{tab:glucose_op_table}对四份样本进行蛋白质浓度测定。
-
-\begin{table}[H]
-\centering
-\caption{测定各样本蔗糖酶活性}
+}
+\end{minipage}
+\begin{minipage}[t]{0.42\textwidth}
+    \caption{测定各样本蔗糖酶活性}
 \label{tab:glucose_pre_op_table}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}cccc@{}}
 \toprule
 试管号          & 1    & 2    & 3    \\ \midrule
@@ -302,7 +300,12 @@ Folin-酚乙试剂/mL & \multicolumn{1}{l}{0.5} & 0.5  & 0.5  & 0.5  & 0.5  & 0.
 DNS试剂/mL     & 0.5  & 0.5  & 0.5  \\
 去离子水/mL      & 5    & 5    & 5    \\ \bottomrule
 \end{tabular}
+}
+\end{minipage}
 \end{table}
+
+\subsubsection{各样品活性的测定}
+首先根据\autoref{tab:glucose_pre_op_table}对样品IV不同样品用量进行预实验(操作同\autoref{tab:stdcurve_glucose})，选择分光度在0.7-0.9的条件，再根据\autoref{tab:glucose_op_table}对四份样本进行蛋白质浓度测定。
 
 \begin{table}[H]
 \centering
@@ -347,6 +350,23 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
 
 \subsection{蔗糖酶酶切去糖基化}
 
+\begin{table}[H]
+\centering
+\caption{蔗糖酶酶切去糖基化步骤}
+\label{Endo H}
+\begin{tabular}{llllllll}
+\toprule
+\multicolumn{1}{c}{管号}        & \multicolumn{1}{c}{电泳} & \multicolumn{1}{c}{动力学} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  &  &  \\ \midrule
+\multicolumn{1}{c}{反应体系（mL）}  & \multicolumn{1}{c}{0.1} & \multicolumn{1}{c}{0.1}  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  &  &  \\
+\multicolumn{1}{c}{0.1mol/L pH5.6 乙酸钠缓冲液（mL）} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  &  &  \\
+\multicolumn{1}{c}{去离子水(mL)}      & \multicolumn{1}{c}{0.017}  & \multicolumn{1}{c}{0.017}   & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  &  &  \\
+\multicolumn{1}{c}{10\%SDS溶液(mL)} & \multicolumn{1}{c}{0.01}  & \multicolumn{1}{c}{0.01}   & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  &  &  \\
+\multicolumn{1}{c}{蔗糖酶（样品IV原液）（mL)}              & \multicolumn{1}{c}{0.06} & \multicolumn{1}{c}{0.06} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  &  &  \\
+\multicolumn{1}{c}{1 U/μL Endo H}             & \multicolumn{1}{c}{0.003}  & \multicolumn{1}{c}{0.003}  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  &  &  \\
+\multicolumn{3}{c}{\textbf{混匀，37\dc 保温3小时}}                                                   & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  &  &  \\
+\multicolumn{3}{c}{\textbf{-20\dc 保存备用}}                                                       & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  &  &  \\  \bottomrule                       
+\end{tabular}
+\end{table}
 
 \subsection{正交试验探究最佳反应条件}
 \begin{enumerate}
@@ -354,7 +374,7 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
     \par \hspace*{2em} 四个基本因素：底物浓度$[S]$、酶浓度$[E]$、温度$T$、$\mathrm{pH}$值，每个因素设置三个水平，各因素的水平值排列顺序，要求不能有明显的数学逻辑关系（等差、等比、全降序、全升序）。不考虑交互作用，可以任意决定把哪一个因素排在哪一列。
     \par \hspace*{2em} 由于实验条件的限制，温度和pH值固定了3个水平值，但可以调整排列的顺序。[S]和[E]的水平值和排列完全自主决定。一旦表头排定，试验方案就确定了，不可中途更改。
     
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{正交试验表头}
 \label{tab:my-table}
@@ -367,26 +387,13 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
 \end{tabular}
 \end{table}
 
-\begin{table}[H]
-\centering
-\caption{正交试验表头}
-\label{tab:my-table}
-\begin{tabular}{@{}cp{4em}<{\centering}p{4em}<{\centering}p{4em}<{\centering}p{4em}<{\centering}@{}}
-\toprule
-\diagbox{水平}{因素}      & {[}S{]} & {[}E{]} & T & pH \\ \midrule
-水平I   & 0       & 0       & 0 & 0  \\
-水平II  & 1       & 1       & 1 & 1  \\
-水平III & 2       & 2       & 2 & 2  \\ \bottomrule
-\end{tabular}
-\end{table}
-
     \item 选择正交表，代入数值
-    \par \hspace*{2em} 选择$L^{9}(3^{4})$正交表进行正交试验，把[S]、[E]、T和pH值四个因素分别填在正交表的A、B、C、D四列上方，称作排表头。把各水平数值按照表头中的排列填入正交表正确位置。
+    \par \hspace*{2em} 选择$L^{9}(3^{4})$正交表(如\autoref{tab:orth})进行正交试验，把[S]、[E]、T和pH值四个因素分别填在正交表的A、B、C、D四列上方，称作排表头。把各水平数值按照表头中的排列填入正交表正确位置。
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{$L^{9}(3^{4})$正交表}
-\label{tab:my-table}
+\label{tab:orth}
 \begin{tabular}{|c|p{4em}<{\centering}|p{4em}<{\centering}|p{4em}<{\centering}|p{4em}<{\centering}|}
 \hline
 \diagbox{实验号}{水平}{因素}  & A & B & C & D \\ \hline
@@ -407,22 +414,254 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
 \end{enumerate}
 
 \subsection{SDS-PAGE}
+\begin{enumerate}
+    \item SDS-PAGE凝胶的制备
+
+\hspace*{2em} SDS-PAGE凝胶分为分离胶和浓缩胶两个部分。首先组装制胶装置，短玻璃板在前，缺口朝上，长玻璃板在后，保持两板下端平整,严格密封夹紧。先制备分离胶，再制备浓缩胶。
+
+\hspace*{2em} 配制分离胶时，过硫酸铵和TEMED的量应根据室温或聚合情况而定。按照配方配制7.5mL分离胶，混匀后加入玻璃板间的缝隙内，到达合适高度（5~6cm），用少许去离子水（或水饱和的异丙醇或正丁醇）沿玻璃板槽侧壁缓慢注入，约5mm高，封闭凝胶液上部，静置约30min后，凝胶与水封层间出现折射率不同的界线，表示凝胶完全聚合，倾净上层去离子封闭水。随后配制浓缩胶，按配方配制2.5ml浓缩胶，混匀后加到已聚合的分离胶上方，直至短玻璃板上端平行线，轻轻将样品槽模板（梳子）插入浓缩胶内，静置约20min后凝胶聚合。分离胶和浓缩胶的配方如下表所示。
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[H]
+\centering
+\caption{SDS-PAGE凝胶的配方}
+\label{tab:my-table}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+{\color[HTML]{000000} 组成成分}                                & {\color[HTML]{000000} 8\%分离胶} & {\color[HTML]{000000} 4\%浓缩胶} \\ \midrule
+{\color[HTML]{000000} 30\%凝胶贮液(mL)}                        & {\color[HTML]{000000} 2}      & {\color[HTML]{000000} 0.35}   \\
+{\color[HTML]{000000} 1.5mol/L Tris-HCl pH=8.8 分离胶缓冲液(mL)} & {\color[HTML]{000000} 1.8}    & {\color[HTML]{000000} 0}      \\
+{\color[HTML]{000000} 0.5mol/L Tris-HCl pH6.7 浓缩胶缓冲液(mL)}  & {\color[HTML]{000000} 0}      & {\color[HTML]{000000} 0.32}   \\
+{\color[HTML]{000000} 10\%SDS(μL)}                         & {\color[HTML]{000000} 75}     & {\color[HTML]{000000} 25}     \\
+{\color[HTML]{000000} TEMED(μL)}                           & {\color[HTML]{000000} 3}      & {\color[HTML]{000000} 3}      \\
+{\color[HTML]{000000} 蒸馏水(mL)}                             & {\color[HTML]{000000} 3.6}    & {\color[HTML]{000000} 1.8}    \\
+{\color[HTML]{000000} 10\%Ap(μL)}                          & {\color[HTML]{000000} 40}     & {\color[HTML]{000000} 20}     \\
+\multicolumn{1}{l}{}                                       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}          \\
+{\color[HTML]{000000} 总体积(mL)}                             & {\color[HTML]{000000} 7.5}    & {\color[HTML]{000000} 2.5}    \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\hspace*{2em} 接下来组装电泳槽，将凝胶玻板和电泳槽精密组装，检查是否密封，确保不渗漏，将电极缓冲液倒入上、下贮槽中，上槽液面应没过短板约0.5cm以上。小心拔去梳子，认真冲洗干净加样孔。
+
+\item 样品处理与加样
+
+\hspace*{2em} 样品的预处理：吸取样品I、II、III原液各50μL，分别放入1.5mL离心管中，12000r/min离心15min，收集上清液
+ 样品IV收集液直接使用。
+
+\hspace*{2em} 样品的处理：将样品溶液中分别按比例加入 “5×SDS蛋白质上样缓冲液” （4份样品加1份上样液），混匀。100\dc 保温5分钟。取出后冷却至室温，12000r/min离心1min，留取上清液。
+
+\hspace*{2em} 上样：用微量注射器处理好的样品混合液，加入样品孔内，记录加样的顺序和位置。如样品浓度较低，可适当增加上样量。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5 \textwidth]{figure/Some Pictures/Sample.png}
+    \caption{上样操作示意图}
+    \label{fig:instrument}
+\end{figure}
+
+    \item 电泳
+    
+\hspace*{2em}在电泳槽中加入适量电极缓冲液，上槽（加样孔端）接负极、下槽接正极，接通电泳仪电源，选择恒流电泳模式，电流控制在2～3mA/样品孔。当样品进分离胶前，电流控制在20mA，待样品进分离胶后，将电流调到30mA。待溴酚蓝指示剂迁移至玻板下沿约0.5cm处停止电泳。
+
+    \item 剥胶
+
+\hspace*{2em} 关闭电源，倾倒上槽电极缓冲液。用自来水冲洗干净，拆解凝胶槽和凝胶模，取下凝胶玻璃板，用专用塑料铲子从短玻璃板侧面撬开玻板。将凝胶底端一角切除作好标记，将凝胶放在蓝色染色盒内，用去离子水清洗干净。
+
+    \item 考马斯亮蓝染色与脱色
+
+\hspace*{2em} 加考马斯亮蓝快速染色液淹没过凝胶，摇床上震摇染色，直至蔗糖酶谱带完全显出。
+
+    \item 拍照留存
+
+\end{enumerate}
 
 \subsection{糖蛋白电泳}
+\begin{enumerate}
+    \item 电泳、
+
+\hspace*{2em} 电泳部分按照SDS-PAGE的步骤进行，此处不再赘述。
+
+    \item 希夫试剂染色与脱色
+    
+\hspace*{2em} （1）加入10\%三氯乙酸淹没凝胶，摇床上震摇固定30分钟。
+
+\hspace*{2em} （2）弃去三氯乙酸溶液，用去离子水漂洗5分钟。
+
+\hspace*{2em} （3）加入1\%高碘酸溶液淹没凝胶，摇床上震摇60分钟。
+
+\hspace*{2em} （4）弃去高碘酸溶液，用去离子水漂洗3次，每次5分钟。
+
+\hspace*{2em} （5）加入含10mmol/L HCl的0.1\%偏重亚硫酸钠溶液淹没凝胶，摇床上震摇漂洗，每次10分钟，直至凝胶从黄色变成无色透明。
+
+\hspace*{2em} （6）弃去偏重亚硫酸钠溶液，去离子水漂洗1次。
+
+\hspace*{2em} （7）加入品红染色溶液淹没凝胶，放入实验柜里进行暗室染色反应1小时，弃去品红溶液，用含10mmol/L HCl的0.5\%偏重亚硫酸钠溶液中漂洗凝胶，期间及时更换0.5\%偏重亚硫酸钠溶液，直至显出最佳谱带。
+
+\hspace*{2em} （8）弃去偏重亚硫酸钠溶液，将凝胶浸入7\%乙酸溶液中长期保存。
+
+    \item 拍照留存
+
+\end{enumerate}
 
 \subsection{活性蛋白电泳}
+\begin{enumerate}
+
+    \item 电泳、
+
+\hspace*{2em} 电泳部分按照SDS-PAGE的步骤进行，此处不再赘述。
+
+    \item 氯化三苯四氮唑 (TTC) 活性染色
+    
+\hspace*{2em} （1）加入 0.1\%TritonX-100溶液淹没凝胶，静置20分钟。
+
+\hspace*{2em} （2）去离子水漂洗两次，每次5分钟。
+
+\hspace*{2em} （3）加入含5\%蔗糖的0.1mol/L乙酸缓冲液(pH4.6)淹没凝胶，50\dc 保温反应30分钟。
+
+\hspace*{2em} （4）去离子水漂洗5分钟。
+
+\hspace*{2em} （5）加入0.1mol/L 碘乙酰胺淹没凝胶，室温放置5分钟。
+
+\hspace*{2em} （6）回收碘乙酰胺。
+
+\hspace*{2em} （7）加入现配的含0.2\%(w/v)TTC的0.5mol/L NaOH溶液淹没凝胶，100\dc 水浴中保温3分钟。
+
+    \item 拍照留存
+
+\end{enumerate}
 
 \subsection{Western Blot}
+\begin{enumerate}
+    \item 电泳
+    
+\hspace*{2em} 电泳部分按照SDS-PAGE的步骤进行，此处不再赘述。
 
+    \item 转膜
+
+\hspace*{2em} 将PVDF膜浸入甲醇10min秒钟，迅速取出。浸入去离子水中10min秒钟，洗去甲醇。浸入转膜缓冲液中平衡 10min分钟，按下图组装好转膜夹具，放入电泳槽中，500mA转膜0.5小时。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.4\textwidth]{figure/Some Pictures/Blot Sandwich.png}
+    \caption{梯度洗脱紫外吸收盐度曲线图}
+    \label{fig:instrument}
+\end{figure}
+
+    \item 包被封闭与漂洗
+
+\hspace*{2em} 将转移好的PVDF膜浸入含5\%脱脂奶粉的 TBST缓冲液（1L含0.1\% 吐温-20，Tris 1.21g， NaCl 4g， pH=7.6）的黑色染色盒内，室温摇动1小时。随后，用无离子水漂洗2次，每次5分钟；TBST缓冲液漂洗3次，每次5分钟。
+
+    \item 一抗杂交结合
+    
+\hspace*{2em} 将PVDF膜浸入含蔗糖酶抗体（5000倍稀释）的TBST缓冲液中，室温摇动1小时。随后用无离子水漂洗2次，每次5分钟。再用TBST缓冲液漂洗3次，每次5分钟。
+
+    \item 二抗杂交结合
+    
+\hspace*{2em} 将PVDF膜浸入含碱性磷酸酶标记的二抗（10000倍稀释）的TBST缓冲液中，室温摇动1小时。随后用无离子水漂洗2次，每次5分钟。再用TBST缓冲液漂洗3次，每次5分钟。
+    \item 碱性磷酸酶法特异显色
+    \item 拍照留存
+    
+\end{enumerate}
+
+\newpage
 \subsection{酶促反应动力学}
+选用样品IV比活性最高管，通过预实验确定所使用的酶量,实验条件根据正交试验结果确定。按照\autoref{tab:op_sucrose_k}，\autoref{tab:op_enzyme_k}操作，测定$\lambda = 520\mathrm{nm}$下的的吸光度。
 
+\begin{table}[H]
+\centering
+\caption{蔗糖酶双倒数动力学曲线绘制操作表}
+\label{tab:op_sucrose_k}
+\begin{tabular}{@{}cccccccc@{}}
+\toprule
+管  号                  & 0     & 1     & 2     & 3     & 4     & 5     & 6     \\ \midrule
+5\%蔗糖/mL              & 0     & 0.1   & 0.2   & 0.3   & 0.4   & 0.5   & 0.6   \\
+0.1mol/L醋酸缓冲液pH4.6/mL & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   \\
+去离子水/mL               & 1.478 & 1.378 & 1.278 & 1.178 & 1.078 & 0.978 & 0.878 \\
+样品IV-蔗糖酶液/mL           & 0.022 & 0.022 & 0.022 & 0.022 & 0.022 & 0.022 & 0.022 \\
+反应体系总体积/mL            & 2     & 2     & 2     & 2     & 2     & 2     & 2     \\ \midrule
+\multicolumn{8}{c}{\textbf{混匀；50\dc 水浴保温10min}}                                           \\ \midrule
+DNS试剂/mL              & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   \\ \midrule
+\multicolumn{8}{c}{\textbf{100\dc 水浴保温5min；取出后用流动水冷却至室温}}                                 \\ \midrule
+去离子水/mL               & 5     & 5     & 5     & 5     & 5     & 5     & 5     \\ \bottomrule
+\end{tabular}
+\end{table}
 
+\begin{table}[H]
+\centering
+\caption{酶切蔗糖酶双倒数动力学曲线绘制操作表}
+\label{tab:op_enzyme_k}
+\begin{tabular}{@{}cccccccc@{}}
+\toprule
+管  号                  & 0     & 1     & 2     & 3     & 4     & 5     & 6     \\ \midrule
+5\%蔗糖/mL              & 0     & 0.1   & 0.2   & 0.3   & 0.4   & 0.5   & 0.6   \\
+0.1mol/L醋酸缓冲液pH4.6/mL & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   \\
+去离子水/mL               & 1.458 & 1.358 & 1.258 & 1.158 & 1.058 & 0.958 & 0.858 \\
+酶切蔗糖酶液/mL             & 0.042 & 0.042 & 0.042 & 0.042 & 0.042 & 0.042 & 0.042 \\ \bottomrule
+\end{tabular}
+\end{table}
+根据实验结果绘制双倒数曲线，计算得$K_\mathrm{m}$和$V_\mathrm{max}$，对比分析糖基化修饰对酶活性。利用 Origin，分别用 Michaelis-Menten 模型和双倒数线性模型进行拟合，比对得出结果，计算米氏常数。
+
+为探究尿素对蔗糖酶和酶切蔗糖酶的活性的影响，按照\autoref{tab:op_sucrose_u},\autoref{tab:op_enzyme_u}绘制蔗糖酶和酶切蔗糖酶两者酶促反应活性随尿素浓度变化的影响。
+
+\begin{table}[H]
+\centering
+\caption{尿素对蔗糖酶影响操作表}
+\label{tab:op_sucrose_u}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}ccccccccccc@{}}
+\toprule
+管  号                  & 0   & 1     & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     \\ \midrule
+样品IV-蔗糖酶液/mL          & 0   & 0.022 & 0.022 & 0.022 & 0.022 & 0.022 & 0.022 & 0.022 & 0.022 & 0.022 \\
+4mol/L尿素/mL & 0 & 0 & 0.05 & 0.1 & 0.2 & 0.3 & 0.4 & \multicolumn{1}{l}{0.01} & \multicolumn{1}{l}{0.02} & \multicolumn{1}{l}{0.04} \\ \midrule
+\multicolumn{11}{c}{\textbf{混匀后静置10分钟}}                                                                      \\ \midrule
+0.1mol/L醋酸缓冲液pH4.6/mL & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   \\
+5\%蔗糖/mL              & 0.6 & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   \\
+去离子水/mL               & 0.9 & 0.878 & 0.828 & 0.778 & 0.678 & 0.578 & 0.478 & 0.868 & 0.858 & 0.838 \\ \bottomrule
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{尿素对酶切蔗糖酶影响操作表}
+\label{tab:op_enzyme_u}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}ccccccccccc@{}}
+\toprule
+管  号                  & 0   & 1     & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     \\ \midrule
+酶切蔗糖酶液/mL             & 0   & 0.042 & 0.042 & 0.042 & 0.042 & 0.042 & 0.042 & 0.042 & 0.042 & 0.042 \\
+4mol/L尿素/mL           & 0   & 0     & 0.05  & 0.1   & 0.2   & 0.3   & 0.4   & 0.01  & 0.02  & 0.04  \\ \midrule
+\multicolumn{11}{c}{\textbf{混匀后静置10分钟}}                                                                      \\ \midrule
+0.1mol/L醋酸缓冲液pH4.6/mL & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   \\
+5\%蔗糖/mL              & 0.6 & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   & 0.6   \\
+去离子水/mL               & 0.9 & 0.858 & 0.808 & 0.758 & 0.658 & 0.558 & 0.458 & 0.848 & 0.838 & 0.818 \\ \bottomrule
+\end{tabular}
+}
+\end{table}
 
 \section{实验数据处理和结果}
 
 \subsection{蔗糖酶的分离与纯化}
- \par 如图所示，随着盐度梯度和离子电导率的移动，在23-60分钟出现一个紫外吸收峰，检测到洗脱出的待提取蛋白质，75-102分钟出现第二个紫外吸收峰，推测为较高盐度下废弃物峰。对收集得样品进行蔗糖酶活性检测，发现显色呈现先加深后变浅的变化，与紫外检测相符合。通过与空白组对照，第16-22号收集管有酶活力。
- 
+ \par 如图\autoref{fig:instrument}所示，随着盐度梯度和离子电导率的移动，在30-62分钟出现一个紫外吸收峰，检测到洗脱出的待提取蛋白质；90-130分钟出现第二个紫外吸收峰；随后140-170分钟出现第三个紫外吸收峰，推测为较高盐度下废弃物峰。对收集得样品进行蔗糖酶活性检测，发现显色呈现先加深后变浅的变化，与紫外检测相符合。通过与空白组对照，第14-23号收集管颜色较深，酶活力强，为梯度洗脱峰对应的样品管。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{figure/curves/instrument.png}
+    \caption{梯度洗脱紫外吸收盐度曲线图}
+    \label{fig:instrument}
+\end{figure}
+根据仪器所给数据，绘制电导率和紫外光吸收度随时间的变化曲线如\autoref{fig:collection}。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{figure/curves/collections_MM.pdf}
+    \caption{电导率和紫外光吸收度随时间的变化曲线}
+    \label{fig:collection}
+\end{figure}
+
+\newpage
 \subsection{蛋白质浓度测定}
 实验得到蛋白质标准曲线相关数据如\autoref{tab:result_PROTEIN_STD}所示。根据操作\autoref{tab:stdcurve_protein}可知，各个试管中蛋白质的浓度计算公\autoref{eq:c_protein}
 
@@ -459,7 +698,7 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
     \end{minipage}
 \end{figure}
 
-根据所得的蛋白质标准曲线，对四个样本中的蛋白质含量进行测定，得
+根据所得的蛋白质标准曲线，对四个样本中的蛋白质含量进行测定，得\autoref{fig:Pro_Samples}。
 
 \begin{figure}[H]
     \begin{minipage}[t]{0.49\textwidth}
@@ -474,6 +713,8 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
         \label{fig:Pro_Samples}
     \end{minipage}
 \end{figure}
+
+根据预实验确定合适的酶量，测定洗脱所得各管的蛋白质含量，得\autoref{fig:Pro_Curve}
 
 \begin{figure}[H]
     \begin{minipage}[t]{0.47\textwidth}
@@ -490,6 +731,7 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
 \end{figure}
 
 \subsection{酶活性的测定}
+实验得到葡萄糖标准曲线相关数据如\autoref{tab:result_GLUCOSE_STD}所示。
 
 \begin{table}[H]
 \centering
@@ -502,29 +744,79 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
 520nm下吸光度 & 0.000 & 0.043 & 0.206 & 0.383 & 0.574 & 0.745 \\ \bottomrule
 \end{tabular}
 \end{table}
-
 \begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.5\textwidth]{figure/1124/Glucose_STD.pdf}
-    \caption{葡萄糖标准浓度曲线}
-    \label{fig:STD_Glucose}
+    \begin{minipage}[t]{0.48\textwidth}
+    \includegraphics[width = \textwidth]{figure/1124/Glucose_STD.jpg}
+    \caption{葡萄糖标准浓度曲线实验结果图}
+    \label{fig:STD_Glucose_fig}
+    \end{minipage}
+    % \centering
+    \begin{minipage}[t]{0.50\textwidth}
+        \includegraphics[width = \textwidth]{figure/1124/Glucose_STD.pdf}
+        \caption{葡萄糖(还原糖)浓度标准曲线}
+        \label{fig:STD_Glucose}
+    \end{minipage}
 \end{figure}
 
+根据所得的葡萄糖标准曲线，对四个样本中的还原糖含量进行测定，进一步确定各管中酶的活性，得\autoref{fig:Activity_Sample}。
+
 \begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.5\textwidth]{figure/1124/Activity_Sample.pdf}
+    \begin{minipage}[t]{0.49\textwidth}
+    \includegraphics[width = \textwidth]{figure/1124/Activity_Sample.jpg}
+    \caption{样本比活力实验结果图}
+    \label{fig:Activity_Sample_fig}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \includegraphics[width = \textwidth]{figure/1124/Activity_Sample.pdf}
     \caption{样本比活力}
     \label{fig:Activity_Sample}
+    \end{minipage}
 \end{figure}
+
+测定洗脱过程中各管酶比活力，得\autoref{fig:Activity_Curve}。
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.5\textwidth]{figure/1124/Activity_Curve.pdf}
+    \begin{minipage}[t]{0.47\textwidth}
+    \includegraphics[width = \textwidth]{figure/1124/Activity_Curve.jpg}
+    \caption{洗脱曲线比活力实验结果图}
+    \label{fig:Activity_Curve_fig}
+    \end{minipage}
+    \begin{minipage}[t]{0.52\textwidth}
+    \includegraphics[width = \textwidth]{figure/1124/Activity_Curve.pdf}
     \caption{洗脱曲线比活力}
     \label{fig:Activity_Curve}
+    \end{minipage}
 \end{figure}
 
-\subsection{蔗糖酶酶切去糖基化}
+综合以上的数据，绘制各管中酶活力、紫外吸光率和电导率之间的关系，得\autoref{fig:collections}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{figure/curves/pro_activity_conduct.pdf}
+    \caption{洗脱过程中各管酶比活力与紫外吸光率、电导率}
+    \label{fig:collections}
+\end{figure}
+
+综合以上数据，计算各个过程中总蛋白浓度、蛋白回收率、酶活力、酶活性回收率等，可得\autoref{tab:purify_overall}。
+
+\begin{table}[H]
+\centering
+\caption{纯化综合评价}
+\label{tab:purify_overall}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+             & 样品I       & 样品II       & 样品III       & 样品IV     \\ \midrule
+体积/mL        & 33.67     & 28.67     & 29.65     & 2.00    \\
+蛋白浓度/$\mathrm{g\cdot L^{-1}}$ & 25.15     & 15.80     & 5.81      & 3.36    \\
+总蛋白量/mg      & 846.87    & 452.96    & 172.36    & 6.73    \\
+蛋白回收率/\%     & 100.00    & 53.49     & 38.05     & 3.90    \\
+酶活力/$\mathrm{mmol\cdot min^{-1} \cdot mL^{-1}}$     & 9505.79   & 6847.42   & 7055.69   & 4552.25 \\
+酶总活力/$\mathrm{mmol\cdot min^{-1}}$      & 320028.28 & 196292.71 & 209201.13 & 9104.49 \\
+酶活性回收率       & 100.00    & 61.34     & 106.58    & 4.35    \\
+比活力/$\mathrm{mmol\cdot min^{-1} \cdot mg^{-1}}$    & 377.90    & 433.36    & 1213.78   & 1353.02 \\
+各步骤纯化倍数      & 1.00      & 1.15      & 2.80      & 1.11    \\
+总纯化倍数        & \multicolumn{4}{c}{3.58}                    \\ \bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{正交试验探究最佳反应条件}
 本小组根据前期的相关实验数据和实验室提供的经验建议方案，确定了因素[E]、[S]的水平，结合实验室提供的T、pH的水平，三名组员根据自己选择的排列顺序确定了各自的表头，三组实验同时进行共同寻找优水平组合。
@@ -759,7 +1051,7 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
     \label{fig:enter-label}
 \end{figure}
 
-根据绘制的图像可知，随着蔗糖的浓度增加，反而吸光度降低，可能在吸光度水平最高的地方取得蔗糖浓度的最优条件，但仍然需要进一步实验或分析确定；随着蔗糖酶浓度的增加，吸光度升高，可能在吸光度水平最高的地方取得蔗糖酶浓度的最优条件，但仍然需要进一步实验或分析确定；而在温度、pH值两个因素中，出现了最优条件的峰值，最优pH为4.6，最优温度为50$\dc$。同时，结合酶与底物作用的相关原理，蔗糖浓度一组的实验结果与理论分析存在一定偏差。因此，略去蔗糖浓度的因素，本正交试验确定的最优组合为[E]=0.050mL，T=50$\dc$，pH=4.6。
+根据绘制的图像可知，随着蔗糖的浓度增加，吸光度降低，可能在吸光度水平最高的地方取得蔗糖浓度的最优条件，但仍然需要进一步实验或分析确定；随着蔗糖酶浓度的增加，吸光度升高，可能在吸光度水平最高的地方取得蔗糖酶浓度的最优条件，但仍然需要进一步实验或分析确定；而在温度、pH值两个因素中，出现了最优条件的峰值，最优pH为4.6，最优温度为50$\dc$。同时，考虑到较高浓度蔗糖粘度对反应体系的影响，可能由于设置的蔗糖浓度太高影响了实验的正常进行，或许应该尝试更低一些的蔗糖浓度进行实验来确定。因此，略去蔗糖浓度的因素，本正交试验确定的最优组合为[E]=0.050mL，T=50$\dc$，pH=4.6。
 
     \item 杨景媛的正交试验
 
@@ -778,7 +1070,7 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
 
 根据确定下来的表头，填入到$L^{9}(3^{4})$正交表中，得到各组的实验条件。按照预先设定开展实验后，在$\lambda=520\mathrm{nm}$下测定其吸光度。
 
-\begin{table}[H]
+\begin{table}[!p]
 \centering
 \caption{杨景媛的正交试验的各组试验条件与极差R值分析}
 \label{tab:my-table}
@@ -824,7 +1116,7 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
 \label{tab:my-table}
 \begin{tabular}{|c|c|c|c|c|}
     \hline \diagbox{水平}{因素}
- & \begin{tabular}[c]{@{}c@{}}{[}S{]}\\ /mL\end{tabular} & \begin{tabular}[c]{@{}c@{}}{[}E{]}\\ /mL\end{tabular} & pH值 & \begin{tabular}[c]{@{}c@{}}温度\\ /\dc\end{tabular} \\ \hline
+ & \begin{tabular}[]{s@{}c@{}}{[}S{]}\\ /mL\end{tabular} & \begin{tabular}[c]{@{}c@{}}{[}E{]}\\ /mL\end{tabular} & pH值 & \begin{tabular}[c]{@{}c@{}}温度\\ /\dc\end{tabular} \\ \hline
 水平I & 0.5 & 0.037 & 4.6 & 50 \\ \hline
 水平II & 0.2 & 0.024 & 5.4 & 37 \\ \hline
 水平III & 1.0 & 0.050 & 3.6 & 65 \\ \hline
@@ -833,7 +1125,7 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
 
 根据确定下来的表头，填入到$L^{9}(3^{4})$正交表中，得到各组的实验条件。按照预先设定开展实验后，在$\lambda=520\mathrm{nm}$下测定其吸光度。
 
-\begin{table}[H]
+\begin{table}[!p]
 \centering
 \caption{林雨泽的正交试验的各组试验条件与极差R值分析}
 \label{tab:my-table}
@@ -869,23 +1161,337 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
     \label{fig:enter-label}
 \end{figure}
 
-根据绘制的图像可知，随着蔗糖、蔗糖酶的浓度增加，反而吸光度降低，可能在吸光度水平最高的地方取得蔗糖浓度的最优条件，但仍然需要进一步实验或分析确定，温度出现了最优条件的峰值，最优温度为50$\dc$；而pH的因素-$k_i$曲线呈现下凹的趋势，无法得出最优条件。因此，除去因素pH，本正交试验确定的最优组合为[E]=0.050mL，[S]=0.050mL，T=50$\dc$。
+根据绘制的图像可知，随着蔗糖、蔗糖酶的浓度增加，反而吸光度降低，可能在吸光度水平最高的地方取得蔗糖浓度的最优条件，但仍然需要进一步实验或分析确定，pH值出现了最优条件的峰值，最优pH为4.6；而温度的因素-$k_i$曲线呈现下凹的趋势，我们认为是出现了实验操作等的相关错误，因此无法得出温度的最优条件。因此，除去温度的因素，本正交试验确定的最优组合为[E]=0.050mL，[S]=0.050mL，pH=4.6。
 
 \end{enumerate}
 
-根据三个正交试验的R值分析结果，结合理论分析，得出蔗糖浓度、蔗糖酶浓度、温度、pH对酶促反应影响的显著性主次关系为：温度>底物（蔗糖）浓度>酶（蔗糖酶）浓度>pH。将三组正交试验的数据联合作指标-因素图如下。
+% 根据三个正交试验的R值分析结果，发现三组实验得到的结论实际上有一定的出入，但这恰好说明了正交试验的均衡性。正交试验向我们提供的实际上因素主次水平的一个大致方向，这样一来出现不同的结果也就显而易见了。综合上述实验结果和分析，得出蔗糖浓度、蔗糖酶浓度、温度、pH对酶促反应影响的显著性主次关系可确定为：温度>底物（蔗糖）浓度>酶（蔗糖酶）浓度>pH。
+将三组正交试验的数据联合作指标-因素图如\autoref{fig:levels}。
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.7\textwidth]{figure/Some Pictures/figure-4.png}
+    \includegraphics[width = 0.8\textwidth]{figure/Some Pictures/figure-4.png}
     \caption{正交试验的指标-因素关系图}
-    \label{fig:enter-label}
+    \label{fig:levels}
 \end{figure}
 
-考虑到底物抑制作用和酶用量等相关因素，综合三组试验，确定得最优的条件组合如下表。
+% 考虑到底物抑制作用、酶用量等相关因素，同时兼顾后续实验中吸光度需要保持在线性范围内的需求，综合三组试验，确定得最优的条件组合如下表。
 
-% Please add the following required packages to your d\dc ument preamble:
-% \usepackage{booktabs}
+% \begin{table}[H]
+% \centering
+% \caption{正交试验确定的最优组合}
+% \label{tab:my-table}
+% \begin{tabular}{@{}ccccc@{}}
+% \toprule
+%  因素&
+%   \begin{tabular}[c]{@{}c@{}}{[}S{]}\\ /mL\end{tabular} &
+%   \begin{tabular}[c]{@{}c@{}}{[}E{]}\\ /mL\end{tabular} &
+%   \begin{tabular}[c]{@{}c@{}}温度\\ /\dc\end{tabular} &
+%   pH \\ \midrule
+% 最优组合 &
+%   0.50 &
+%   0.037 &
+%   50 &
+%   4.6 \\ \bottomrule
+% \end{tabular}
+% \end{table}
+
+\newpage
+\subsection{SDS-PAGE}
+\par 根据Marker条带拟合$\ln M - R_\text{f}$标准曲线如\ref{fig:SDS_STD}，与之对比可以推知分离出蛋白质的分子量。从条带灰度曲线图知，分子量小于130kD的蛋白占主要成分，随分离纯化的进行，蛋白质含量逐渐降低，而样品$\mathrm{IV}$中保留了少量126kD蛋白，其余蛋白主要集中在46-79kD，以及大量32kD以下的小分子杂蛋白。酶切样品中126kD蛋白较少，而是转变为85-100kD的蛋白，其余部分与样品$\mathrm{IV}$大致相同。
+
+\begin{figure}[H]
+    \subfloat[实验结果图]{
+    \label{fig:SDS_Result}
+    \includegraphics[width = 0.53\textwidth]{figure/Electro/sds page 图.jpg}
+    }
+    \subfloat[$\ln M - R_\text{f}$标准曲线]{
+    \label{fig:SDS_STD}
+    \includegraphics[width = 0.45\textwidth]{figure/Electro/SDS_STD.pdf}
+    }
+    \caption{蔗糖酶SDS-PAGE电泳}
+    \label{fig:SDS-PAGE}
+\end{figure}
+
+\begin{figure}[H]  
+\centering  
+\begin{minipage}[t]{0.69\textwidth}  
+\centering  
+\begin{table}[H]  
+\centering  
+\caption{SDS-PAGE中Marker分子量及其对数与$R_\text{f}$}  
+\label{tab:SDS-PAGE_marker}  
+\begin{tabular}{@{}ccc@{}}  
+\toprule  
+$R_\text{f}$    & M/kD & lnM   \\ \midrule  
+0.098 & 250  & 5.521 \\  
+0.180 & 150  & 5.011 \\  
+0.285 & 100  & 4.605 \\  
+0.360 & 75   & 4.317 \\  
+0.586 & 50   & 3.912 \\  
+0.757 & 37   & 3.611 \\  
+0.977 & 25   & 3.219 \\ \bottomrule  
+\end{tabular}  
+\end{table}  
+\end{minipage}%  
+\begin{minipage}[t]{0.3\textwidth}  
+\centering  
+\caption{Marker对照卡}  
+\includegraphics[width=0.8\textwidth]{figure/Electro/image.png}  
+\label{fig:Marker_Standard}  
+\end{minipage}  
+\end{figure}  
+
+% \begin{table}[ht]
+% \centering
+% \caption{SDS-PAGE中Marker分子量及其对数与$R_\text{f}$}
+% \label{tab:SDS-PAGE_marker}
+% \begin{tabular}{@{}ccc@{}}
+% \toprule
+% $R_\text{f}$    & M/kD & lnM   \\ \midrule
+% 0.098 & 250  & 5.521 \\
+% 0.180 & 150  & 5.011 \\
+% 0.285 & 100  & 4.605 \\
+% 0.360 & 75   & 4.317 \\
+% 0.586 & 50   & 3.912 \\
+% 0.757 & 37   & 3.611 \\
+% 0.977 & 25   & 3.219 \\ \bottomrule
+% \end{tabular}
+% \end{table}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width = 0.25\textwidth]{figure/Electro/image.png}
+%     \caption{Marker标准分子量对照卡}
+%     \label{fig:Marker_Standard}
+% \end{figure}
+\begin{figure}[H]
+     \centering
+     \label{fig:4.6.1}
+     \includegraphics[width = 0.8\textwidth]{figure/Electro/sds 条带.png}
+     \caption{蔗糖酶SDS-PAGE电泳样品条带}
+\end{figure}
+
+对图\ref{fig:SDS_Result}灰度分析可得，各条带分子量如\autoref{tab:sds_weight}所示。
+
+\newpage
+\begin{table}[H]
+    \centering
+    \caption{SDS-PAGE分子量与$R_\mathrm{f}$分析}
+    \includegraphics[width = 0.7\textwidth]{figure/electro_analysis/sds-1.png}
+        \includegraphics[width = 0.7\textwidth]{figure/electro_analysis/sds-2.png}
+    \label{tab:sds_weight}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption*{续表}
+    \includegraphics[width = 0.8\textwidth]{figure/electro_analysis/sds-3.png}
+    \label{tab:sds_weight}
+\end{table}
+
+\newpage
+\subsection{糖蛋白电泳}
+\par 主要条带集中在216kD左右，由于$R_\text{f}$较小，分离不彻底。其余条带还出现于40kD以下，但含量较低。对于216kD条带，样品$\mathrm{I}$中糖蛋白浓度较低，样品$\mathrm{II}$、$\mathrm{III}$、$\mathrm{IV}$中糖基化蛋白含量明显提高，知第一步纯化热处理沉降了大量糖基化程度低的杂蛋白，由此推断糖基化对于蛋白质热稳定性有一定作用。而由上样量计算知样品$\mathrm{II}$、$\mathrm{III}$、$\mathrm{IV}$中糖蛋白浓度略呈下降趋势，知乙醇沉淀和离子交换色谱较多地去除了糖基化的杂蛋白。
+
+\begin{figure}[H]
+    \subfloat[实验结果图]{
+    \label{fig:SDS_Result}
+    \includegraphics[width = 0.52\textwidth]{figure/electro_analysis/glu_result.png}
+    }
+    \subfloat[$\ln M - R_\text{f}$标准曲线]{
+    \label{fig:EN_Result}
+    \includegraphics[width = 0.47\textwidth]{figure/Electro/EN_STD.pdf}
+    }
+    \caption{蔗糖酶糖蛋白电泳}
+    \label{fig:EN}
+\end{figure}
+
+% \begin{figure}[H]
+%    \centering
+%     \caption{蔗糖酶糖蛋白电泳}
+ %    \label{fig:4.7.1}
+ %    \includegraphics[width = 0.8\textwidth]{figure/Electro/糖蛋白电泳图.png}
+%\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{糖蛋白电泳灰度分析}
+\label{tab:my-table}
+\begin{tabular}{@{}ccccccll@{}}
+\toprule
+                     &     & Peak Rf & Peak value & Raw volume & Mr/kD &  &  \\ \midrule
+\multirow{4}{*}{样品$\mathrm{I}$} & 条带1 & 0.054   & 128        & 205        & 230   &  &  \\
+                     & 条带2 & 0.211   & 110        & 30         & 144   &  &  \\
+                     & 条带3 & 0.611   & 95         & 27         & 44    &  &  \\
+                     & 条带4 & 0.728   & 94         & 7          & 31    &  &  \\  \midrule
+\multirow{4}{*}{样品$\mathrm{II}$} & 条带1 & 0.056   & 186        & 2628       & 228   &  &  \\
+                     & 条带2 & 0.214   & 112        & 7          & 143   &  &  \\
+                     & 条带3 & 0.739   & 96         & 34         & 30    &  &  \\
+                     & 条带4 & 0.857   & 103        & 14         & 21    &  &  \\ \midrule
+\multirow{4}{*}{样品$\mathrm{III}$} & 条带1 & 0.053   & 195        & 3562       & 230   &  &  \\
+                     & 条带2 & 0.702   & 91         & 13         & 34    &  &  \\
+                     & 条带3 & 0.803   & 95         & 18         & 25    &  &  \\
+                     & 条带4 & 0.851   & 105        & 35         & 22    &  &  \\  \midrule
+\multirow{5}{*}{样品$\mathrm{IV}$} & 条带1 & 0.059   & 203        & 2338       & 226   &  &  \\
+                     & 条带2 & 0.695   & 92         & 22         & 34    &  &  \\
+                     & 条带3 & 0.746   & 91         & 8          & 29    &  &  \\
+                     & 条带4 & 0.796   & 93         & 16         & 25    &  &  \\
+                     & 条带5 & 0.852   & 107        & 161        & 21    &  &  \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{活性蛋白电泳}
+\par 各样品均有227kD附近的条带出现，由于$R_\text{f}$较小，分离不彻底，可能含有多种分子量接近的蛋白质，而在样品$\mathrm{I，II，III}$中还有64kD的条带，但在纯化后的样品$\mathrm{IV}$中没有发现；酶切样品中条带下移，可见去除糖链后蛋白电泳时移动性更好。
+
+\begin{figure}
+    \subfloat[实验结果图]{
+    \label{fig:SDS_Result}
+    \includegraphics[width = 0.50\textwidth]{figure/electro_analysis/act.png}
+    }
+    \subfloat[$\ln M - R_\text{f}$标准曲线]{
+    \label{fig:AC_Result}
+    \includegraphics[width = 0.46\textwidth]{figure/Electro/AC_STD.pdf}
+    }
+    \caption{蔗糖酶活性电泳}
+    \label{fig:AC}
+\end{figure}
+
+
+% \begin{table}[]
+% \centering
+% \caption{活性电泳条带灰度分析}
+% \label{tab:Actibity_Electro}
+% \begin{tabular}{@{}cccccc@{}}
+% \toprule
+% 样品编号                 & 条带  & Peak Rf & Peak value & Raw volume & Mr/kD \\ \midrule
+% \multirow{3}{*}{样品$\mathrm{I}$} & 条带1 & 0.029   & 141        & 45         & 244   \\
+%                      & 条带2 & 0.515   & 88         & 25         & 67    \\
+%                      & 条带3 & 0.981   & 75         & 10         & 19    \\ \midrule
+% \multirow{3}{*}{样品$\mathrm{II}$} & 条带1 & 0.036   & 141        & 25         & 240   \\
+%                      & 条带2 & 0.514   & 94         & 22         & 67    \\
+%                      & 条带3 & 0.991   & 77         & 20         & 19    \\ \midrule
+% \multirow{2}{*}{样品$\mathrm{III}$} & 条带1 & 0.031   & 138        & 50         & 243   \\
+%                      & 条带2 & 0.512   & 91         & 32         & 67    \\ \midrule
+% 样品$\mathrm{IV}$                  & 条带1 & 0.043   & 193        & 50         & 235   \\ \midrule
+% 样品$\mathrm{IV}$(酶切)                 & 条带1 & 0.056   & 183        & 40         & 227   \\\bottomrule
+% \end{tabular}
+% \end{table}
+\begin{table}[H]
+    \centering
+    \caption{活性电泳灰度分析结果}
+    \includegraphics{figure/electro_analysis/act-1.png}
+    \label{fig:acti}
+\end{table}
+
+\subsection{Western Blot}
+\par 由Western Blot结果知，样品中含有130-160kD蛋白质，样品$\mathrm{I}$中86kD左右蛋白经过热处理后被去除。样品$\mathrm{IV}$中小分子量的杂蛋白含量降低。样品酶切后蛋白含量下降，未检测出相应条带。
+
+% \begin{table}[ht]
+% \centering
+% \caption{WB条带灰度分析}
+% \label{491}
+% \begin{tabular}{@{}cccccl@{}}
+% \toprule
+%                      &     & Peak $R_\text{f}$ & Peak value & Raw volume &  \\ \cmidrule(lr){1-5}
+% \multirow{7}{*}{样品$\mathrm{I}$} & 条带1 & 0.144   & 71         & 64         &  \\
+%                      & 条带2 & 0.201   & 83         & 175        &  \\
+%                      & 条带3 & 0.221   & 76         & 54         &  \\
+%                      & 条带4 & 0.324   & 48         & 21         &  \\
+%                      & 条带5 & 0.394   & 54         & 135        &  \\
+%                      & 条带6 & 0.426   & 51         & 29         &  \\
+%                      & 条带7 & 0.619   & 53         & 12         &  \\  \cmidrule(lr){1-5}
+% \multirow{3}{*}{样品$\mathrm{II}$} & 条带1 & 0.192   & 58         & 41         &  \\
+%                      & 条带2 & 0.204   & 58         & 41         &  \\
+%                      & 条带3 & 0.886   & 58         & 12         &  \\  \cmidrule(lr){1-5}
+% \multirow{4}{*}{样品$\mathrm{III}$} & 条带1 & 0.179   & 64         & 25         &  \\
+%                      & 条带2 & 0.187   & 64         & 15         &  \\
+%                      & 条带3 & 0.617   & 73         & 18         &  \\
+%                      & 条带4 & 0.884   & 67         & 65         &  \\  \cmidrule(lr){1-5}
+% \multirow{3}{*}{样品$\mathrm{IV}$} & 条带1 & 0.136   & 51         & 49         &  \\
+%                      & 条带2 & 0.199   & 63         & 32         &  \\
+%                      & 条带3 & 0.216   & 62         & 59         &  \\  \cmidrule(lr){1-5}
+% 样品$\mathrm{IV}$（酶切）              & 条带1 & 0.888   & 73         & 21         & \\ \cmidrule(lr){1-5}
+% \end{tabular}
+% \end{table}
+
+\begin{figure}[H]
+    \subfloat[实验结果图]{
+    \label{fig:SDS_Result}
+    \includegraphics[width = 0.53\textwidth]{figure/electro_analysis/wb_result.png}
+    }
+    \subfloat[$\ln M - R_\text{f}$标准曲线]{
+    \label{fig:AC_Result}
+    \includegraphics[width = 0.45\textwidth]{figure/Electro/WB_STD.pdf}
+    }
+    \caption{Western Blot}
+    \label{fig:WB}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Western Blot灰度分析}
+    \includegraphics[width = 0.9\textwidth]{figure/electro_analysis/wb.png}
+    \label{tab:my_label}
+\end{table}
+
+\subsection{酶促反应动力学}
+在探究底物浓度对酶催化反应速度的影响这部分实验中，我们通过改变底物浓度测得了不同底物浓度下的初始反应速率$V_0$。以$1/{V_0}$为纵坐标，以$1/{[S]}$为横坐标作图。根据米氏方程的倒数形式，我们可以根据其双倒数曲线图的斜率和截距得出酶促反应的$V_\mathrm{max}$和$K_\mathrm{m}$。
+
+\begin{figure}[H]
+    \begin{minipage}[t]{0.49\textwidth}
+        \includegraphics[width = \textwidth]{figure/1215/Kinetics-Sucrose.pdf}
+        \caption{蔗糖酶双倒数动力学曲线}
+        \label{fig:Kinetics-Sucrose}
+    \end{minipage}
+    % \centering
+    \begin{minipage}[t]{0.49\textwidth}
+        \includegraphics[width = \textwidth]{figure/1215/Kinetics-EnzymeCut.pdf}
+        \caption{酶切蔗糖酶双倒数动力学曲线}
+        \label{fig:Kinetics-EnzymeCut}
+    \end{minipage}
+\end{figure}
+
+根据\autoref{eq:Lineweaver-Burk}，我们可以计算得到蔗糖酶的$V_\mathrm{max} = 2.34\times 10^{-3} \mathrm{mmol\cdot L^{-1} \cdot min^{-1}}$，$K_\mathrm{m}=2.91\times 10^{-2} \mathrm{mmol\cdot L^{-1}}$，酶切蔗糖酶的$V_\mathrm{max} = 1.90\times 10^{-3} \mathrm{mmol\cdot L^{-1} \cdot min^{-1}}$，$K_\mathrm{m}=1.99\times 10^{-2} \mathrm{mmol\cdot L^{-1}}$
+
+向蔗糖酶中分别加入不同浓度的尿素，得到蔗糖酶和酶切蔗糖酶催化速度随尿素浓度变化如\autoref{fig:Urea-Sucrose},\autoref{fig:Urea-EnzymeCut}。
+
+\newpage
+\begin{figure}[H]
+    \begin{minipage}[t]{0.49\textwidth}
+        \includegraphics[width = \textwidth]{figure/1215/Urea-Sucrose.pdf}
+        \caption{蔗糖酶反应速率随尿素浓度变化曲线}
+        \label{fig:Urea-Sucrose}
+    \end{minipage}
+    % \centering
+    \begin{minipage}[t]{0.49\textwidth}
+        \includegraphics[width = \textwidth]{figure/1215/Urea-EnzymeCut.pdf}
+        \caption{酶切蔗糖酶反应速率随尿素浓度变化曲线}
+        \label{fig:Urea-EnzymeCut}
+    \end{minipage}
+\end{figure}
+
+\section{分析与讨论}
+
+\subsection{蔗糖酶的分离与纯化}
+经破碎、热处理、乙醇沉淀和复性溶解等步骤对酵母细胞中的外蔗糖酶进行提取和粗分离，并使用阴离子交换柱色谱进行纯化，通过自动收集器收集到了一系列样本溶液。使用3,5-二硝基水杨酸法检验蔗糖酶的活性，观察发现18号管的颜色最深，说明该管可能为酶活性最高管。由于肉眼观察存在一定的局限性，加之18号管附近的样品管颜色差异不明显，因此可通过分光光度法测定吸光度等定量的方法进一步确定酶活性最高管，作为样品IV参与后续实验。同时，在破壁粗提、热处理、乙醇沉淀与复性溶解三个节点收集了样本I、样本II、样本III，也对阴离子交换柱色谱穿流峰洗脱时的产物进行留样。
+
+生物化学实验是我们现阶段所接触到的最接近于科研工作的课程。通过具有连贯性的实验设计和实际执行，我们学习了基本的实验操作和分析技能，深入思考实验背后的原理和逻辑，为今后的科研生活奠定坚实的基础。而正确、规范的实验操作是保证实验准确性和可信度的必要前提。在蔗糖酶的提取和粗分离的过程中，史锋老师一针见血地指出了我们在研磨过程中存在的技术错误，并为我们示范了规范的操作方法，从而保证了粗提取的有效性。并且，两位老师一直在强调做实验不能只停留在“做”的层面，而是应该“动动脑筋”，深入思考，从“怎么做”、“为什么这样做”到“如何做会更好”，只有自己真正掌握了实验背后的原理和逻辑，才能真正有所收获、有所成长，而不是一味照搬式地操作，出现错误的甚至威胁实验室安全的行为。
+
+\subsection{蛋白质浓度测定}
+\par 通过建立蛋白质标准曲线，计算各管样品液蛋白含量，样品I至IV蛋白浓度逐步下降显著，表明分离纯化有效。由离子交换色谱各管收集液测定可见，穿流液蛋白浓度较高，此步洗脱了大量杂蛋白。梯度洗脱收集液蛋白浓度出现先上升后下降的趋势，符合蔗糖酶富集分离的预期；浓度峰值出现于18号管，通过与空白对照，保留了蛋白含量较高的15-22号管。
+\par 选用灵敏度高的Folin-酚法测定蛋白含量，由于样品蛋白的组成复杂，结构与作为标准的牛血清蛋白不完全相匹配，所以按照标准曲线计算的蛋白含量存在一定的误差，但该系统误差的存在对于各步骤含量的鉴定和对比并不造成明显的干扰。同时Folin-酚法还会受在样品液中可能存在的\ce{Mg^2+}、\ce{NH4^+}、\ce{Tris-Cl}、碳水化合物和其他还原剂的干扰,但由于这些物质浓度较低，且在各组测定中保持恒定，故对结果的干扰也可以忽略不计。此外需要注意的是，福林酚法乙试剂仅在酸性条件下稳定，加入碱性的体系中，需要即刻混匀在被破坏前充分反应，对操作的规范性和一致性提出了较高的要求。
+
+\subsection{酶活性的测定}
+\par 使用DNS法分光光度定量检测蔗糖酶活性，对保温时间的严格控制是保证结果可信度的关键，也是造成方法误差的一个主要因素。此外，分光光度计系统误差也对吸光度检测造成一定的影响。
+\par 通过与葡萄糖标准曲线对照，分析蔗糖酶比活力，得知每步纯化样品比活力均上升，反映了样品中蔗糖酶的逐步富集。经过乙醇沉淀、复性溶解，比活力显著提高，说明蔗糖酶在乙醇作用下可以较完全地沉淀，且能够在缓冲体系下自发地完成复性，从而与众多杂蛋白区分开来，收获了较好的分离效果。
+
+\subsection{正交试验探究最佳反应条件}
+
+根据三个正交试验的R值分析结果(如\autoref{fig:levels})，发现三组实验得到的结论实际上有一定的出入，但这恰好说明了正交试验的均衡性。正交试验向我们提供的实际上因素主次水平的一个大致方向，这样一来出现不同的结果也就显而易见了。综合上述实验结果和分析，得出蔗糖浓度、蔗糖酶浓度、温度、pH对酶促反应影响的显著性主次关系可确定为：温度>底物（蔗糖）浓度>酶（蔗糖酶）浓度>pH。
+
+考虑到底物抑制作用、酶用量等相关因素，同时兼顾后续实验中吸光度需要保持在线性范围内的需求，综合三组试验，确定得最优的条件组合如下表。
 \begin{table}[H]
 \centering
 \caption{正交试验确定的最优组合}
@@ -906,277 +1512,23 @@ DNS试剂/mL     & 0.5 & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   & 0.5   &
 \end{table}
 
 \subsection{SDS-PAGE}
-\par 根据marker条带拟合$\ln M - R_\text{f}$标准曲线如\ref{fig:SDS_STD}，与之对比可以推知分离出蛋白质的分子量。从条带灰度曲线图知，分子量小于130kD的蛋白占主要成分，随分离纯化的进行，蛋白质含量逐渐降低，而样品$\mathrm{IV}$中保留了少量126kD蛋白，其余蛋白主要集中在46-79kD，以及大量32kD以下的小分子杂蛋白。酶切样品中126kD蛋白较少，而是转变为85-100kD的蛋白，其余部分与样品$\mathrm{IV}$大致相同。
-
-\begin{figure}
-    \subfloat[实验结果图]{
-    \label{fig:SDS_Result}
-    \includegraphics[width = 0.53\textwidth]{figure/Electro/sds page 图.jpg}
-    }
-    \subfloat[$\ln M - R_\text{f}$标准曲线]{
-    \label{fig:SDS_STD}
-    \includegraphics[width = 0.45\textwidth]{figure/Electro/SDS_STD.pdf}
-    }
-    \caption{蔗糖酶SDS-PAGE电泳}
-    \label{fig:SDS-PAGE}
-\end{figure}
-% \begin{figure}[H]
-%     \centering
-%     \caption{蔗糖酶SDS-PAGE电泳}
-%     \label{fig:4.6.1}
-%     \includegraphics[width = 0.8\textwidth]{figure/logo/sds page 图.jpg}
-% \end{figure}
-\begin{table}[H]
-\centering
-\caption{SDS-PAGE中Marker分子量及其对数与$R_\text{f}$}
-\label{tab:SDS-PAGE_marker}
-\begin{tabular}{@{}ccc@{}}
-\toprule
-$R_\text{f}$    & M/kD & lnM   \\ \midrule
-0.098 & 250  & 5.521 \\
-0.180 & 150  & 5.011 \\
-0.285 & 100  & 4.605 \\
-0.360 & 75   & 4.317 \\
-0.586 & 50   & 3.912 \\
-0.757 & 37   & 3.611 \\
-0.977 & 25   & 3.219 \\ \bottomrule
-\end{tabular}
-\end{table}
-% \begin{table}[H]
-% \centering
-% \caption{SDS PAGE 电泳分子量比移值对数关系}
-% \label{46}
-% \begin{tabular}{@{}llllll@{}}
-% \toprule
-% \multicolumn{1}{c}{}       & \multicolumn{1}{c}{$R_\text{f}$}    & \multicolumn{1}{c}{M/kD} & \multicolumn{1}{c}{lnM}   &  &  \\ \midrule
-% \multicolumn{1}{c}{marker} & \multicolumn{1}{c}{0.098} & \multicolumn{1}{c}{250}  & \multicolumn{1}{c}{5.521} &  &  \\
-% \multicolumn{1}{c}{marker} & \multicolumn{1}{c}{0.18}  & \multicolumn{1}{c}{150}  & \multicolumn{1}{c}{5.011} &  &  \\
-% \multicolumn{1}{c}{marker} & \multicolumn{1}{c}{0.285} & \multicolumn{1}{c}{100}  & \multicolumn{1}{c}{4.605} &  &  \\
-% \multicolumn{1}{c}{marker} & \multicolumn{1}{c}{0.36}  & \multicolumn{1}{c}{75}   & \multicolumn{1}{c}{4.317} &  &  \\
-% \multicolumn{1}{c}{marker} & \multicolumn{1}{c}{0.586} & \multicolumn{1}{c}{50}   & \multicolumn{1}{c}{3.912} &  &  \\
-% \multicolumn{1}{c}{marker} & \multicolumn{1}{c}{0.757} & \multicolumn{1}{c}{37}   & \multicolumn{1}{c}{3.611} &  &  \\
-% \multicolumn{1}{c}{marker} & \multicolumn{1}{c}{0.977} & \multicolumn{1}{c}{25}   & \multicolumn{1}{c}{3.219} &  &  \\
-% \multicolumn{1}{c}{}       & \multicolumn{1}{c}{}      & \multicolumn{1}{c}{}     & \multicolumn{1}{c}{}      &  &  \\ \bottomrule
-% \end{tabular}
-% \end{table}
+\par 由于考马斯蓝染色针对的是所有的蛋白质，因此SDS-PAGE得到的胶上所有的蛋白均有显示。观察电泳结果发现SDS-PAGE在分子量较小的蛋白区域分离效果较差。在绘制标准曲线和进行灰度分析后，我们发现由于小分子蛋白的含量较大，使得蔗糖酶所在区域的蛋白含量随着分离纯化的进行（样品I到样品IV）并没有较大的变化，但好在综合观察能够看出蔗糖酶有逐渐富集的趋势，相对占比有所提升。并且，在进行灰度分析时，指示前沿的颜色也对结果造成了一定的影响。因此，对于SDS-PAGE，由于我们要研究的蔗糖酶的分子量较大，为了获得更好的观察结果和实验结论，可以适当切除分子量较小的蛋白所在的胶。
 
 \subsection{糖蛋白电泳}
-\par 主要条带集中在216kD左右，由于$R_\text{f}$较小，分离不彻底，其余条带还出现于40kD以下，但含量较低。对于216kD条带，样品$\mathrm{I}$、$\mathrm{II}$、$\mathrm{III}$中糖基化蛋白含量高，而样品$\mathrm{IV}$中检测到糖蛋白含量明显降低，知经过柱色谱纯化，去除了大量糖基化的杂蛋白。
-
-\begin{figure}
-    \subfloat[实验结果图]{
-    \label{fig:SDS_Result}
-    \includegraphics[width = 0.52\textwidth]{figure/Electro/糖蛋白电泳图.jpg}
-    }
-    \subfloat[$\ln M - R_\text{f}$标准曲线]{
-    \label{fig:EN_Result}
-    \includegraphics[width = 0.47\textwidth]{figure/Electro/EN_STD.pdf}
-    }
-    \caption{蔗糖酶糖蛋白电泳}
-    \label{fig:EN}
-\end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \caption{蔗糖酶糖蛋白电泳}
-%     \label{fig:4.7.1}
-%     \includegraphics[width = 0.8\textwidth]{figure/logo/糖蛋白电泳图.jpg}
-% \end{figure}
-\begin{table}[]
-\centering
-\caption{糖蛋白电泳灰度分析}
-\label{tab:}
-\begin{tabular}{@{}cccccc@{}}
-\toprule
-样品编号                                               & 条带  & Peak $R_\text{f}$ & Peak value & Raw volume & $M_r$/kD \\ \midrule
-\multirow{7}{*}{样品$\mathrm{I}$}                               & 条带1 & 0.144   & 71         & 64         & 172   \\
-                                                   & 条带2 & 0.201   & 83         & 175        & 149   \\
-                                                   & 条带3 & 0.221   & 76         & 54         & 142   \\
-                                                   & 条带4 & 0.324   & 48         & 21         & 109   \\
-                                                   & 条带5 & 0.394   & 54         & 135        & 91    \\
-                                                   & 条带6 & 0.426   & 51         & 29         & 84    \\
-                                                   & 条带7 & 0.619   & 53         & 12         & 52    \\ \midrule
-\multirow{3}{*}{样品$\mathrm{II}$}                               & 条带1 & 0.192   & 58         & 41         & 153   \\
-                                                   & 条带2 & 0.204   & 58         & 41         & 148   \\
-                                                   & 条带3 & 0.886   & 58         & 12         & 26    \\ \midrule
-\multirow{4}{*}{样品$\mathrm{III}$}                               & 条带1 & 0.179   & 64         & 25         & 158   \\
-                                                   & 条带2 & 0.187   & 64         & 15         & 154   \\
-                                                   & 条带3 & 0.617   & 73         & 18         & 52    \\
-                                                   & 条带4 & 0.884   & 67         & 65         & 26    \\ \midrule
-\multirow{3}{*}{样品$\mathrm{IV}$}                               & 条带1 & 0.136   & 51         & 49         & 176   \\
-                                                   & 条带2 & 0.199   & 63         & 32         & 150   \\
-                                                   & 条带3 & 0.216   & 62         & 59         & 144   \\ \midrule
-\begin{tabular}[c]{@{}c@{}}样品$\mathrm{IV}$\\ （酶切）\end{tabular} & 条带1 & 0.888   & 73         & 21         & 26    \\ \bottomrule
-\end{tabular}
-\end{table}
-% \begin{table}[]
-% \centering
-% \caption{糖蛋白电泳灰度分析}
-% \label{48}
-% \begin{tabular}{@{}cccccc@{}}
-% \toprule
-%                      &     & Peak $R_\text{f}$ & Peak value & Raw volume & Mr/kD \\ \midrule
-% \multirow{5}{*}{样品$\mathrm{I}$} & 条带1 & 0.059   & 203        & 2338       & 213   \\
-%                      & 条带2 & 0.695   & 92         & 22         & 33    \\
-%                      & 条带3 & 0.746   & 91         & 8          & 29    \\
-%                      & 条带4 & 0.796   & 93         & 16         & 25    \\
-%                      & 条带5 & 0.852   & 107        & 161        & 21    \\
-% \multirow{4}{*}{样品$\mathrm{II}$} & 条带1 & 0.053   & 195        & 3562       & 217   \\
-%                      & 条带2 & 0.702   & 91         & 13         & 33    \\
-%                      & 条带3 & 0.803   & 95         & 18         & 24    \\
-%                      & 条带4 & 0.851   & 105        & 35         & 21    \\
-% \multirow{4}{*}{样品$\mathrm{III}$} & 条带1 & 0.056   & 186        & 2628       & 215   \\
-%                      & 条带2 & 0.214   & 112        & 7          & 136   \\
-%                      & 条带3 & 0.739   & 96         & 34         & 29    \\
-%                      & 条带4 & 0.857   & 103        & 14         & 21    \\
-% \multirow{4}{*}{样品$\mathrm{IV}$} & 条带1 & 0.054   & 128        & 205        & 216   \\
-%                      & 条带2 & 0.211   & 110        & 30         & 137   \\
-%                      & 条带3 & 0.611   & 95         & 27         & 43    \\
-%                      & 条带4 & 0.728   & 94         & 7          & 30    \\
-% \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\ \bottomrule
-% \end{tabular}
-% \end{table}
-
+\par 检测到样品中含有糖蛋白，随纯化过程的进行其含量先增后减，知热处理主要除去糖基化程度较低或没有糖基化的杂蛋白，而后续纯化除去了糖基化程度较高的杂蛋白，反映了糖基化对蛋白的热稳定性起作用。蔗糖酶应包含在各样品条带1中；根据标准曲线计算的分子量表明蔗糖酶主要以二聚体的形式存在。
+\par 存在主要条带迁移率过小、分离不完全的问题，对该电泳方法可以加以改进，比如通过改变上样液组分，显色条件优化等来使蔗糖酶比移值更大，分离更完全。
 \subsection{活性蛋白电泳}
-\par 各样品均有227kD附近的条带出现，由于$R_\text{f}$较小，分离不彻底，可能含有多种分子量接近的蛋白质，而在样品$\mathrm{I，II，III}$中还有64kD的条带，但在纯化后的样品$\mathrm{IV}$中没有发现；酶切样品中条带下移，可见去除糖链后蛋白电泳时移动性更好。
-
-\begin{figure}
-    \subfloat[实验结果图]{
-    \label{fig:SDS_Result}
-    \includegraphics[width = 0.50\textwidth]{figure/Electro/活性电泳图.jpg}
-    }
-    \subfloat[$\ln M - R_\text{f}$标准曲线]{
-    \label{fig:AC_Result}
-    \includegraphics[width = 0.46\textwidth]{figure/Electro/AC_STD.pdf}
-    }
-    \caption{蔗糖酶活性电泳}
-    \label{fig:AC}
-\end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \caption{蔗糖酶活性电泳}
-%     \label{fig:4.8.1}
-%     \includegraphics[width = 0.8\textwidth]{figure/logo/活性电泳图.jpg}
-% \end{figure}
-
-\begin{table}[]
-\centering
-\caption{活性电泳条带灰度分析}
-\label{481}
-\begin{tabular}{@{}cccccl@{}}
-\toprule
-                     &                      & Peak $R_\text{f}$              & Peak value           & Raw volume           &  \\ \midrule
-\multirow{3}{*}{样品$\mathrm{I}$} & 条带1                  & 0.029                & 141                  & 45                   &  \\
-                     & 条带2                  & 0.515                & 88                   & 25                   &  \\
-                     & 条带3                  & 0.981                & 75                   & 10                   &  \\  \midrule
-\multirow{3}{*}{样品$\mathrm{II}$} & 条带1                  & 0.036                & 141                  & 25                   &  \\
-                     & 条带2                  & 0.514                & 94                   & 22                   &  \\
-                     & 条带3                  & 0.991                & 77                   & 20                   &  \\  \midrule
-\multirow{2}{*}{样品$\mathrm{III}$} & 条带1                  & 0.031                & 138                  & 50                   &  \\
-                     & 条带2                  & 0.512                & 91                   & 32                   &  \\  \midrule
-样品 $\mathrm{IV}$                 & 条带1                  & 0.043                & 193                  & 50                   &  \\
- \bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[]
-\centering
-\caption{活性电泳条带灰度分析}
-\label{tab:Actibity_Electro}
-\begin{tabular}{@{}cccccc@{}}
-\toprule
-样品编号                 & 条带  & Peak Rf & Peak value & Raw volume & Mr/kD \\ \midrule
-\multirow{3}{*}{样品$\mathrm{I}$} & 条带1 & 0.029   & 141        & 45         & 244   \\
-                     & 条带2 & 0.515   & 88         & 25         & 67    \\
-                     & 条带3 & 0.981   & 75         & 10         & 19    \\ \midrule
-\multirow{3}{*}{样品$\mathrm{II}$} & 条带1 & 0.036   & 141        & 25         & 240   \\
-                     & 条带2 & 0.514   & 94         & 22         & 67    \\
-                     & 条带3 & 0.991   & 77         & 20         & 19    \\ \midrule
-\multirow{2}{*}{样品$\mathrm{III}$} & 条带1 & 0.031   & 138        & 50         & 243   \\
-                     & 条带2 & 0.512   & 91         & 32         & 67    \\ \midrule
-样品$\mathrm{IV}$                  & 条带1 & 0.043   & 193        & 50         & 235   \\ \bottomrule
-\end{tabular}
-\end{table}
+\par 对比各样品主要条带灰度值知，样品IV中蔗糖酶活性最高，验证了通过分离纯化，蔗糖酶在蛋白中的含量提高。对比样品IV与酶切样品，发现糖基化会降低蛋白在凝胶中的迁移率，除了分子量的影响，这可能还与糖链干扰了SDS胶束的负电性的均匀分布，或者糖链与胶粒分子之间的较强的相互作用有关。酶切样品存在拖尾现象，推测是因为蔗糖酶去糖基化不完全。同时推测蔗糖酶以二聚体形式存在更加稳定。样品I、II、III中64kD条带出现可能是因为内蔗糖酶或其他同工酶的存在，通过离子交换梯度洗脱，二者与离子交换剂亲和力不同，而得以分离。
 
 \subsection{Western Blot}
-\par 由Western Blot结果知，样品中含有130-160kD蛋白质，样品$\mathrm{I}$中86kD左右蛋白经过热处理后被去除。样品$\mathrm{IV}$中小分子量的杂蛋白含量降低。样品酶切后蛋白含量下降，未检测出相应条带。
-% Please add the following required packages to your d\dc ument preamble:
-% \usepackage{booktabs}
-% \usepackage{multirow}
-\begin{table}[]
-\centering
-\caption{WB条带灰度分析}
-\label{491}
-\begin{tabular}{@{}cccccl@{}}
-\toprule
-                     &     & Peak $R_\text{f}$ & Peak value & Raw volume &  \\ \cmidrule(lr){1-5}
-\multirow{7}{*}{样品$\mathrm{I}$} & 条带1 & 0.144   & 71         & 64         &  \\
-                     & 条带2 & 0.201   & 83         & 175        &  \\
-                     & 条带3 & 0.221   & 76         & 54         &  \\
-                     & 条带4 & 0.324   & 48         & 21         &  \\
-                     & 条带5 & 0.394   & 54         & 135        &  \\
-                     & 条带6 & 0.426   & 51         & 29         &  \\
-                     & 条带7 & 0.619   & 53         & 12         &  \\  \cmidrule(lr){1-5}
-\multirow{3}{*}{样品$\mathrm{II}$} & 条带1 & 0.192   & 58         & 41         &  \\
-                     & 条带2 & 0.204   & 58         & 41         &  \\
-                     & 条带3 & 0.886   & 58         & 12         &  \\  \cmidrule(lr){1-5}
-\multirow{4}{*}{样品$\mathrm{III}$} & 条带1 & 0.179   & 64         & 25         &  \\
-                     & 条带2 & 0.187   & 64         & 15         &  \\
-                     & 条带3 & 0.617   & 73         & 18         &  \\
-                     & 条带4 & 0.884   & 67         & 65         &  \\  \cmidrule(lr){1-5}
-\multirow{3}{*}{样品$\mathrm{IV}$} & 条带1 & 0.136   & 51         & 49         &  \\
-                     & 条带2 & 0.199   & 63         & 32         &  \\
-                     & 条带3 & 0.216   & 62         & 59         &  \\  \cmidrule(lr){1-5}
-样品$\mathrm{IV}$（酶切）              & 条带1 & 0.888   & 73         & 21         & \\ \cmidrule(lr){1-5}
-\end{tabular}
-\end{table}
+相比其他方法，WB在显色时颜色较浅，并且随着时间的推移颜色还在逐渐褪去。
 
-\begin{figure}
-    \subfloat[实验结果图]{
-    \label{fig:SDS_Result}
-    \includegraphics[width = 0.53\textwidth]{figure/Electro/wb图.jpg}
-    }
-    \subfloat[$\ln M - R_\text{f}$标准曲线]{
-    \label{fig:AC_Result}
-    \includegraphics[width = 0.45\textwidth]{figure/Electro/WB_STD.pdf}
-    }
-    \caption{蔗糖酶活性电泳}
-    \label{fig:WB}
-\end{figure}        
-% \begin{figure}[H]
-%     \centering
-%     \caption{蔗糖酶Western Blot检测}
-%     \label{fig:4.9.1}
-%     \includegraphics[width = 0.8\textwidth]{figure/logo/wb图.jpg}
-% \end{figure}
-\subsection{酶促反应动力学}
-
-
-\section{分析与讨论}
-
-\subsection{蔗糖酶的分离与纯化}
-经破碎、热处理、乙醇沉淀和复性溶解等步骤对酵母细胞中的外蔗糖酶进行提取和粗分离，并使用阴离子交换柱色谱进行纯化，通过自动收集器收集到了一系列样本溶液。使用3,5-二硝基水杨酸法检验蔗糖酶的活性，观察发现18号管的颜色最深，说明该管可能为酶活性最高管。由于肉眼观察存在一定的局限性，加之18号管附近的样品管颜色差异不明显，因此可通过分光光度法测定吸光度等定量的方法进一步确定酶活性最高管，作为样品IV参与后续实验。同时，在破壁粗提、热处理、乙醇沉淀与复性溶解三个节点收集了样本I、样本II、样本III，也对阴离子交换柱色谱穿流峰洗脱时的产物进行留样。
-
-生物化学实验是我们现阶段所接触到的最接近于科研工作的课程。通过具有连贯性的实验设计和实际执行，我们学习了基本的实验操作和分析技能，深入思考实验背后的原理和逻辑，为今后的科研生活奠定坚实的基础。而正确、规范的实验操作是保证实验准确性和可信度的必要前提。在蔗糖酶的提取和粗分离的过程中，史锋老师一针见血地指出了我们在研磨过程中存在的技术错误，并为我们示范了规范的操作方法，从而保证了粗提取的有效性。并且，两位老师一直在强调做实验不能只停留在“做”的层面，而是应该“动动脑筋”，深入思考，从“怎么做”、“为什么这样做”到“如何做会更好”，只有自己真正掌握了实验背后的原理和逻辑，才能真正有所收获、有所成长，而不是一味照搬式地操作，出现错误的甚至威胁实验室安全的行为。
-
-\subsection{蛋白质浓度测定}
-
-\subsection{酶活性的测定}
-\par 使用DNS法分光光度定量检测蔗糖酶活性，对保温时间的严格控制是保证结果可信度的关键，也是方法误差的一个主要来源。此外，分光光度计系统误差也对吸光度检测造成一定的影响。
-\subsection{蔗糖酶酶切去糖基化}
-
-\subsection{正交试验探究最佳反应条件}
-
-\subsection{SDS-PAGE}
-
-\subsection{糖蛋白电泳}
-
-\subsection{活性蛋白电泳}
-
-\subsection{Western Blot}
+从膜上可以看出，随着分离纯化的进行，蔗糖酶所在的区域的着色不断加深，说明经过分离纯化蔗糖酶得到了较好的富集。并且，经过去糖基化处理后，条带下移，证明去糖基化的蔗糖酶分子量降低，结合外蔗糖酶的糖基化水平较高这一事实可以较好地验证这一点。另外，去糖基化处理的样品的条带并不是完全下移的，我们推测在此样品中还存在去糖基化不完全的蔗糖酶。
 
 \subsection{酶促反应动力学}
+根据双倒数曲线分析结果我们发现，经过去糖基化处理的蔗糖酶的$K_\mathrm{m}$和$V_\mathrm{max}$与未经去糖基化处理的相比均有所下降。由于$K_\mathrm{m}$表示达到$V_0=\frac{V_\mathrm{max}}{2}$时的底物浓度，因此$K_\mathrm{m}$在一定程度上可以反映酶与底物的亲和性。实验结果表面，经过去糖基化的蔗糖酶催化蔗糖水解的$V_{max}$降低并且与底物结合的亲和力有所提高，我们推测是由于经过去糖基化后蔗糖酶的构象发生了一定的变化，其结构变得更加松散，有利于蔗糖与结合位点相结合。
+
+我们知道，尿素是蔗糖酶的一种变性剂，较高浓度的尿素会导致蔗糖酶的结构发生变化而失活。结合$V_0-c_\mathrm{urea}$图像我们发现，无论蔗糖酶是否去糖基化，随着尿素浓度的增大，其$V_0$均出现先升后降的趋势，并且去糖基化的蔗糖酶$V_0$升高的幅度和范围比较小，较快地迅速下降。我们推测在低浓度尿素的存在下，尽管蔗糖酶的构象发生了一定的变化，但可以类比于前文提到的“结构松散”，蔗糖能够更有机会与结合位点结合从而提高$V_0$，而随着尿素浓度的增大，蔗糖酶逐渐变性，$V_0$也就逐渐降低了。并且通过去糖基化的蔗糖酶$V_0$升高的幅度和范围较小的表现不难看出糖基化或许对于稳定蔗糖酶结构、提高催化效率有重要作用。
 
 % \section{蔗糖酶提取和粗分离、离子交换树脂色谱}
 
@@ -1336,3 +1688,5 @@ $R_\text{f}$    & M/kD & lnM   \\ \midrule
 % \end{table}
 
 % \sectionnonum[none]{同一页上的章标题}
+%Wilson N, Simpson R, Cooper-Liddell C. Introductory glycosylation analysis using SDS-PAGE and peptide mass fingerprinting. Methods Mol Biol. 2009;534:205-12. doi: 10.1007/978-1-59745-022-5_15. PMID: 19277550.
+%Taverna M, Tran NT, Merry T, Horvath E, Ferrier D. Electrophoretic methods for process monitoring and the quality assessment of recombinant glycoproteins. Electrophoresis. 1998 Nov;19(15):2572-94. doi: 10.1002/elps.1150191505. PMID: 9848665.
